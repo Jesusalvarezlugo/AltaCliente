@@ -31,11 +31,21 @@ namespace AltaCliente.Servicios
             Console.WriteLine("\t\t\t║          0) Salir            ║");
             Console.WriteLine("\t\t\t║                              ║");
             Console.WriteLine("\t\t\t╚══════════════════════════════╝");
-            Console.Write("\t\tIntroduce una opción: ");
+            Console.WriteLine("\t\tIntroduce una opción: ");
 
             opcion = Console.ReadKey(true).KeyChar - ('0');
 
             return opcion;
+        }
+
+        public string NuevoAltaCliente()
+        {
+            string respuesta;
+
+            Console.WriteLine("Desea hacer un nuevo alta de cliente(s/n)");
+            respuesta = Console.ReadLine();
+
+            return respuesta;
         }
     }
 }

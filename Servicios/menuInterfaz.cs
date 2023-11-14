@@ -11,5 +11,7 @@ namespace AltaCliente.Servicios
 
         public void MostrarMensajeBienvenida();
         public int MostrarMenuYSeleccion();
+
+        public string NuevoAltaCliente();
     }
 }
