@@ -30,14 +30,20 @@ namespace AltaCliente.Controladores
                         cerrarMenu = true;
                         break;
 
-                    case 1:
+                    case 1:                      
+                        
+                            oi.DarAltaCliente(listaClientes);
+                            for (int posicion = 0; posicion < listaClientes.Count; posicion++)
+                            {
+                            Console.WriteLine(listaClientes[posicion].ToString());
+                            }
+                            respuesta = mi.NuevoAltaCliente();
+                                                                  
 
-                        oi.DarAltaCliente(listaClientes);
-                                               
                         break;
                 }
 
-                respuesta = mi.NuevoAltaCliente();
+                
 
             }
             

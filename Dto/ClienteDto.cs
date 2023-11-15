@@ -8,30 +8,32 @@ namespace AltaCliente.Dto
 {
     internal class ClienteDto
     {
-        //Atributos
-
-        string nombreCliente;
-        string apellidosCliente;
-        string dniCliente;
-        string fechaNacimientoCliente;
-        string emailCliente;
-        int tlfCliente;
-        string fchAltaCliente;
-        string fchBajaCliente;
+        //Atributos(Caracteristicas)
+        //son private por defecto
+        long idCliente;//PK(PRIMARY KEY)
+        string nombreCliente="aaaaa";
+        string apellidosCliente="aaaaa";
+        string dniCliente = "aaaaa";
+        string fechaNacimientoCliente="9999/12/31";
+        string emailCliente = "aaaaa";
+        int tlfCliente=111111111;
+        string fchAltaCliente= "9999/12/31";
+        string fchBajaCliente= "9999/12/31";
         
 
         
 
-        //Getters Y Setters
+        //Getters Y Setters(Get-lectura Set-escritura)
         public string NombreCliente { get => nombreCliente; set => nombreCliente = value; }
         public string ApellidosCliente { get => apellidosCliente; set => apellidosCliente = value; }
         public string DniCliente { get => dniCliente; set => dniCliente = value; }
        
         public string EmailCliente { get => emailCliente; set => emailCliente = value; }
         public int TlfCliente { get => tlfCliente; set => tlfCliente = value; }
-        
+        public long IdCliente { get => idCliente; set => idCliente = value; }
 
-        //Constructores
+
+        //Constructores(metodos que crean objetos -new)
 
         public ClienteDto()
         {
@@ -42,8 +44,7 @@ namespace AltaCliente.Dto
         {
             this.nombreCliente = nombreCliente;
             this.apellidosCliente = apellidosCliente;
-            this.dniCliente = dniCliente;
-            
+            this.dniCliente = dniCliente;           
             this.emailCliente = emailCliente;
             this.tlfCliente = tlfCliente;
             
@@ -51,12 +52,16 @@ namespace AltaCliente.Dto
 
         //toString
 
-        public string toString()
+        override
+        public string ToString()
         {
-            string objetoString = this.nombreCliente+" "+this.apellidosCliente+"\n"+this.dniCliente+"\n"
-                                  +this.emailCliente+" "+this.tlfCliente;
+            string clienteString ="Nombre: "+ this.nombreCliente+ 
+                " Apellidos: "+this.apellidosCliente+"\n" +
+                " DNI: "+this.dniCliente+
+                "\n Email: "+this.emailCliente+
+                " Telefono: "+this.tlfCliente;
 
-            return objetoString;
+            return clienteString;
         }
           
     }
