@@ -16,7 +16,7 @@ namespace AltaCliente.Controladores
             int opcionS;
             bool cerrarMenu = false;
 
-            while (!cerrarMenu||respuesta == "s")
+            while (!cerrarMenu||respuesta=="s")
             {
                 mi.MostrarMensajeBienvenida();
 
@@ -30,16 +30,19 @@ namespace AltaCliente.Controladores
                         cerrarMenu = true;
                         break;
 
-                    case 1:                      
-                        
+                    case 1:
+
+                        do 
+                        {
                             oi.DarAltaCliente(listaClientes);
                             for (int posicion = 0; posicion < listaClientes.Count; posicion++)
                             {
-                            Console.WriteLine(listaClientes[posicion].ToString());
+                                Console.WriteLine(listaClientes[posicion].ToString());
                             }
                             respuesta = mi.NuevoAltaCliente();
-                                                                  
 
+                        } while (respuesta == "s");
+                                                                                                                       
                         break;
                 }
 
