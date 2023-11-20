@@ -18,7 +18,9 @@ namespace AltaCliente.Servicios
 
         private ClienteDto ClienteNuevo()
         {
-            string nombreCliente;
+           /* 
+            * FORMA LARGA
+            * string nombreCliente;
             string apellidosCliente;
             string dniCliente;
             string fechaNacimientoCliente;
@@ -26,6 +28,7 @@ namespace AltaCliente.Servicios
             int tlfCliente;
             string fchAltaCliente;
 
+            Console.WriteLine("Introduce el id: ");
             Console.WriteLine("Introduce tu nombre: ");
             nombreCliente=Console.ReadLine();
 
@@ -48,6 +51,37 @@ namespace AltaCliente.Servicios
 
             ClienteDto nuevoCliente = new ClienteDto(nombreCliente,apellidosCliente,dniCliente,fechaNacimientoCliente,emailCliente,tlfCliente,fchAltaCliente);
             return nuevoCliente;
+           
+            */
+
+            //FORMA CORTA
+            ClienteDto nuevoCliente=new ClienteDto();
+
+            Console.WriteLine("Introduzca el id: ");
+            nuevoCliente.IdCliente=Convert.ToInt64(Console.ReadLine());
+
+            Console.WriteLine("Introduzca el nombre: ");
+            nuevoCliente.NombreCliente = Console.ReadLine();
+
+            Console.WriteLine("Introduzca los apellidos: ");
+            nuevoCliente.ApellidosCliente = Console.ReadLine();
+
+            Console.WriteLine("Introduzca la fecha de nacimiento: ");
+            nuevoCliente.FechaNacimientoCliente = Console.ReadLine();
+
+            Console.WriteLine("Introduzca el email: ");
+            nuevoCliente.EmailCliente = Console.ReadLine();
+
+            Console.WriteLine("Introduzca el telefono: ");
+            nuevoCliente.TlfCliente = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Introduzca la fecha de alta: ");
+            nuevoCliente.FchAltaCliente = Console.ReadLine();
+
+            return nuevoCliente;
+
+
+
         }
 
 

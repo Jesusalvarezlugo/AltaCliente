@@ -31,6 +31,8 @@ namespace AltaCliente.Dto
         public string EmailCliente { get => emailCliente; set => emailCliente = value; }
         public int TlfCliente { get => tlfCliente; set => tlfCliente = value; }
         public long IdCliente { get => idCliente; set => idCliente = value; }
+        public string FechaNacimientoCliente { get => fechaNacimientoCliente; set => fechaNacimientoCliente = value; }
+        public string FchAltaCliente { get => fchAltaCliente; set => fchAltaCliente = value; }
 
 
         //Constructores(metodos que crean objetos -new)
@@ -55,7 +57,8 @@ namespace AltaCliente.Dto
         override
         public string ToString()
         {
-            string clienteString ="Nombre: "+ this.nombreCliente+ 
+            string clienteString ="ID:  \n" +this.idCliente+
+                "Nombre: "+ this.nombreCliente+ 
                 " Apellidos: "+this.apellidosCliente+"\n" +
                 " DNI: "+this.dniCliente+
                 "\n Email: "+this.emailCliente+
